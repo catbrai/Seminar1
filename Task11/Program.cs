@@ -15,14 +15,12 @@ Console.WriteLine($"Случайное число из отрезка 100 - 999 
 
 // Console.WriteLine(doubleDigit);
 
-int doubleDigit = DoubleDigit(number);
-Console.WriteLine(doubleDigit);
+int deletSecondDigit = DeleteSecondDigit(number);
+Console.WriteLine($"Число без второй цифры {deletSecondDigit}");
 
-int DoubleDigit (int num)
+int DeleteSecondDigit (int num)
 {
     int firstDigit = number / 100;
-    int firstDigit2 = firstDigit * 10;
     int secondDigit = number % 10;
-    int doubleDigit = firstDigit2+secondDigit;
-    return doubleDigit; 
+    return firstDigit * 10 + secondDigit;
 }
