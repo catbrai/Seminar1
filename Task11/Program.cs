@@ -8,18 +8,21 @@
 int number = new Random().Next(100, 1000);
 Console.WriteLine($"Случайное число из отрезка 100 - 999 -> {number}");
 
-int firstDigit = number / 100;
-int secondDigit = number % 10;
+// int firstDigit = number / 100;
+// int firstDigit2 = firstDigit * 10;
+// int secondDigit = number % 10;
+// int doubleDigit = firstDigit2+secondDigit;
 
-Console.WriteLine($"{firstDigit}{secondDigit}");
+// Console.WriteLine(doubleDigit);
 
 int doubleDigit = DoubleDigit(number);
-Console.WriteLine($"Двузначное число от случайного трехзначного -> {doubleDigit}");
+Console.WriteLine(doubleDigit);
 
 int DoubleDigit (int num)
 {
     int firstDigit = number / 100;
+    int firstDigit2 = firstDigit * 10;
     int secondDigit = number % 10;
-    string doubleDigit = firstDigit + secondDigit; 
+    int doubleDigit = firstDigit2+secondDigit;
     return doubleDigit; 
 }
