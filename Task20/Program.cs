@@ -12,20 +12,20 @@
 
 Console.WriteLine("Введите координату Х1");
 int x1Coor = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Х1: {x1Coor}");
+
 Console.WriteLine("Введите координату Y1");
 int y1Coor = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Y1: {y1Coor}");
+
 Console.WriteLine("Введите координату Х2");
 int x2Coor = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Х2: {x2Coor}");
+
 Console.WriteLine("Введите координату Y2");
 int y2Coor = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Y2: {y2Coor}");
+
 
 double dRound = Distance(x1Coor, y1Coor, x2Coor, y2Coor);
 double result = Math.Round(dRound, 2, MidpointRounding.ToZero);
-Console.WriteLine($"Расстояние между точкми -> {result}");
+Console.WriteLine($"Расстояние между точками -> {result}");
 
 double Distance(double x1, double y1, double x2, double y2)
 {
