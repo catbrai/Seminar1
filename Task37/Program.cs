@@ -7,38 +7,38 @@
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
-Random rnd = new Random();
-int[] arr = new int[size];
-for (int i = 0; i < size; i++)
-{
-arr[i] = rnd.Next(min, max + 1);
-}
-return arr;
+    Random rnd = new Random();
+    int[] arr = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = rnd.Next(min, max + 1);
+    }
+    return arr;
 }
 
 void PrintArray(int[] arr)
 {
-Console.WriteLine("");
-Console.Write("[");
-for (int i = 0; i < arr.Length - 1; i++)
-{
-Console.Write($"{arr[i]}, ");
-}
-Console.WriteLine($"{arr[arr.Length - 1]}]");
+    Console.WriteLine("");
+    Console.Write("[");
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        Console.Write($"{arr[i]}, ");
+    }
+    Console.WriteLine($"{arr[arr.Length - 1]}]");
 }
 
 int[] MultiplyElements(int[] arr)
 {
-int newLength = arr.Length / 2;
-if (arr.Length % 2 == 1) newLength += 1;
-int[] newArr = new int[newLength];
+    int newLength = arr.Length / 2; // длина нового массива
+    if (arr.Length % 2 == 1) newLength += 1; // нечетное кол во элементов
+    int[] newArr = new int[newLength]; // инициализируем новый массив и даем новую длину
 
-for (int i = 0; i < arr.Length / 2; i++)
-{
-newArr[i] = arr[i] * arr[arr.Length - 1 - i];
-}
-if (arr.Length % 2 == 1) newArr[arr.Length / 2] = arr[arr.Length / 2];
-return newArr;
+    for (int i = 0; i < arr.Length / 2; i++) // половина длинны массива
+    {
+        newArr[i] = arr[i] * arr[arr.Length - 1 - i];
+    }
+    if (arr.Length % 2 == 1) newArr[newLength - 1] = arr[arr.Length / 2];// четное колво элементов
+    return newArr;
 }
 
 int[] array = CreateArrayRndInt(7, 0, 10);
